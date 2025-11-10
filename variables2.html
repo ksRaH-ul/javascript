@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="a"></p>
+     <p id="b"></p>
+      <p id="c"></p>
+       <p id="d"></p>
+       <p id="e"></p>
+    <script>
+        var name1="wheat",name2="rice",name3="sugar";
+        var price1=20,price2=10,price3=50;
+        var quantity1=2,quantity2=3,quantity3=4;
+        document.getElementById("a").innerHTML="name:"+ name1 +" " +"price: rs"+(price1*quantity1);
+         document.getElementById("b").innerHTML="name:"+ name2 +" " +"price: rs"+(price2*quantity2);
+          document.getElementById("c").innerHTML="name:"+ name3 +" " +"price: rs"+(price3*quantity3);
+           document.getElementById("d").innerHTML="total Bill:rs"+" "+(price1*quantity1+price2*quantity2+price3*quantity3);
+           quantity2=7;
+           document.getElementById("e").innerHTML="updated total Bill:rs"+" "+(price1*quantity1+price2*quantity2+price3*quantity3);
+    </script>
+</body>
+</html>
