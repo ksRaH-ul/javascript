@@ -3,8 +3,13 @@
 <!DOCTYPE html>
 <html>
 <body>
+    <p id="i"></p>
 <script>
-console.log("This will be displayed inside the console.");
+    var x=5,y=10;
+console.log("sum="+(x+y)+" "+ "difference="+(x-y)+" "+ "Multiplication="+(x*y)+" "+ "Division="+(x/y));
+document.write("sum="+(x+y)+" "+ "difference="+(x-y)+" "+ "Multiplication="+(x*y)+" "+ "Division="+(x/y));
+document.getElementById("i").innerHTML="sum="+(x+y)+" "+ "difference="+(x-y)+" "+ "Multiplication="+(x*y)+" "+ "Division="+(x/y);
+window.alert("sum="+(x+y)+" "+ "difference="+(x-y)+" "+ "Multiplication="+(x*y)+" "+ "Division="+(x/y));
 </script>
 </body>
 </html>

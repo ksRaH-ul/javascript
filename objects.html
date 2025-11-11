@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="a"></p>
+    <script>
+        let book={
+            title:"Harry Potter Series",
+            author:"J.K Rowling",
+            year:1997,
+            getSummary:function()
+            {
+                 return ( "The Book"+" "+ this.title+" "+" was written by"+" "+this.author+" "+"in year" + " "+ this.year);
+
+                }
+        }
+        function PrintBookSummary(book) 
+        {
+            document.getElementById("a").innerHTML=book.getSummary();
+        }
+        PrintBookSummary(book);
+    </script>
+</body>
+</html>
