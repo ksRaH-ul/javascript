@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Access</title>
+</head>
+<body>
+
+<p id="result"></p>
+
+<button onclick="checkAccess()">Check Access</button>
+
+<script>
+    let user = {
+        name: "Rahul",
+        age: 20,
+        isAdmin: true
+    };
+
+    function checkAccess() {
+
+        let access = (user.age >= 18 && user.isAdmin) ? "Access Granted" : "Access Denied";
+        document.getElementById("result").innerHTML = access;
+
+        if ("age" in user) {
+            console.log("Age property exists");
+        }
+
+        delete user.age;
+        console.log(user);
+    }
+</script>
+
+</body>
+</html>
