@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Dashboard</title>
+</head>
+<body>
+
+<h3>All Student Names:</h3>
+<p id="names"></p>
+
+<h3>Students Scoring More Than 60:</h3>
+<p id="above60"></p>
+
+<h3>Total Score:</h3>
+<p id="total"></p>
+
+<h3>All Passed?</h3>
+<p id="allPassed"></p>
+
+<h3>Any Student Scored Above 90?</h3>
+<p id="above90"></p>
+
+<h3>Students Sorted by Score (High to Low):</h3>
+<p id="sorted"></p>
+
+<script>
+    // Student data
+    var students = [
+        { name: "Rahul", score: 78 },
+        { name: "Asha", score: 32 },
+        { name: "Kiran", score: 91 },
+        { name: "Meena", score: 65 },
+        { name: "John", score: 40 }
+    ];
+
+    // 1. List all student names using map()
+    var names = students.map(function(stu){
+        return stu.name;
+    });
+
+    document.getElementById("names").innerHTML = names.join(", ");
+
+    // 2. New array of students who scored > 60 using filter()
+    var above60 = students.filter(function(stu){
+        return stu.score > 60;
+    }).map(function(stu){
+        return stu.name;
+    });
+
+    document.getElementById("above60").innerHTML = above60.join(", ");
+
+    // 3. Total score using reduce()
+    var totalScore = students.reduce(function(total, stu){
+        return total + stu.score;
+    }, 0);
+
+    document.getElementById("total").innerHTML = totalScore;
+
+    // 4. Check if all students passed (score > 35) using every()
+    var allPassed = students.every(function(stu){
+        return stu.score > 35;
+    });
+
+    document.getElementById("allPassed").innerHTML = allPassed ? "YES" : "NO";
+
+    // 5. Check if at least one scored > 90 using some()
+    var scoredAbove90 = students.some(function(stu){
+        return stu.score > 90;
+    });
+
+    document.getElementById("above90").innerHTML = scoredAbove90 ? "YES" : "NO";
+
+    // 6. Sort students by score DESCENDING
+    var sorted = students.slice().sort(function(a, b){
+        return b.score - a.score;
+    });
+
+    var sortedText = "";
+    sorted.forEach(function(stu){
+        sortedText += stu.name + " - " + stu.score + "<br>";
+    });
+
+    document.getElementById("sorted").innerHTML = sortedText;
+
+</script>
+
+</body>
+</html>

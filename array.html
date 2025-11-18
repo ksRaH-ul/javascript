@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Listing</title>
+</head>
+<body>
+
+<h3>Product List</h3>
+<p id="all"></p>
+
+<h3>Products with Price > 50</h3>
+<p id="filtered"></p>
+
+<h3>Updated Product List</h3>
+<p id="updated"></p>
+
+<script>
+    // Arrays
+    var products = ["Apple", "Orange", "Banana", "Grapes"];
+    var prices = [50, 40, 30, 60];
+
+    // 1. Merge product and price into one array
+    var merged = [];
+    for (var i = 0; i < products.length; i++) {
+        merged.push("Product: " + products[i] + " - Price: " + prices[i]);
+    }
+
+    // Display all products
+    var allText = "";
+    merged.forEach(function(item){
+        allText += item + "<br>";
+    });
+    document.getElementById("all").innerHTML = allText;
+
+    // 2. Filter products with price > 50
+    var filtered = [];
+    for (var i = 0; i < prices.length; i++) {
+        if (prices[i] > 50) {
+            filtered.push("Product: " + products[i] + " - Price: " + prices[i]);
+        }
+    }
+
+    var filterText = "";
+    filtered.forEach(function(item){
+        filterText += item + "<br>";
+    });
+    document.getElementById("filtered").innerHTML = filterText;
+
+    // 3. Add new product "Watermelon" with price 80
+    products.push("Watermelon");
+    prices.push(80);
+
+    // Create updated list
+    var updated = [];
+    for (var i = 0; i < products.length; i++) {
+        updated.push("Product: " + products[i] + " - Price: " + prices[i]);
+    }
+
+    // Display updated list
+    var updatedText = "";
+    updated.forEach(function(item){
+        updatedText += item + "<br>";
+    });
+    document.getElementById("updated").innerHTML = updatedText;
+
+</script>
+
+</body>
+</html>
