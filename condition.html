@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var purchase=0;
+        while(purchase<5)
+        {   
+            var code= parseInt(prompt("Enter Product code"));
+            
+            var item="";
+            var price=0;
+            var total=0;
+            switch(code)
+            {
+                case 1:
+                    item="Apple";
+                    price=30;
+                    break;
+                case 2:
+                    item="Banana";
+                    price=10;
+                    break;
+                case 3:
+                    item="Mango";
+                    price=50;
+                    break;
+                default:
+                    alert("invalid code");
+                    continue;
+            }
+
+            var quantity=parseInt(prompt("Enter the quantity"));
+            total=price*quantity;
+            alert(`Total price of ${item} is: ${total} `);
+            if(total>1000){
+                alert("high Purchase");
+            }
+            else{
+                alert("normal Purchase");
+            }
+            purchase++;
+
+        }       
+    </script>
+</body>
+</html>
