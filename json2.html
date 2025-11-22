@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s ='{"name":"rahul","feedback":"thank you for  your service"}';
+        let obj;
+        try{
+        obj= JSON.parse(s);
+        }
+        catch(a)
+        {
+            console.log(a);
+        }
+        let check= ()=>{
+            var x= obj.feedback;
+            
+            var c=/thank/ig.test(x);
+            try{
+                if(c==true) throw "Positive feedback received";
+                else throw"Feedback noted";
+            }
+            catch(e)
+            {
+                return e;
+            }
+        }
+        console.log(check());
+        
+    </script>
+</body>
+</html>

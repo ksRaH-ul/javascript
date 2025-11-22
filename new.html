@@ -3,17 +3,19 @@
 <html>
 <body>
 
+<h2>JavaScript Multiline arrow function</h2>
+
 <p id="demo"></p>
 
 <script>
+'use strict';
 
-let number = 2;
-if (number > 0)
-    console.log("The number is positive.");
+let sum = (a, b) => {  // the curly brace opens a multiline function
+  let result = a + b;
+  return result; // if we use curly braces, then we need an explicit "return"
+}
 
- else 
-   console.log("The number is negative or zero.");
-
+alert( sum(1, 2) ); // 3
 </script>
 
 </body>
