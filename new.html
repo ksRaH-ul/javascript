@@ -1,22 +1,10 @@
-
 <!DOCTYPE html>
 <html>
 <body>
 
-<h2>JavaScript Multiline arrow function</h2>
+<h2 onmousedown="document.write(this)">The JavaScript <i>this</i> Keyword</h2>
 
-<p id="demo"></p>
-
-<script>
-'use strict';
-
-let sum = (a, b) => {  // the curly brace opens a multiline function
-  let result = a + b;
-  return result; // if we use curly braces, then we need an explicit "return"
-}
-
-alert( sum(1, 2) ); // 3
-</script>
+<button onclick="document.write(this)">Click to Remove Me!</button>
 
 </body>
 </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User{
+            constructor(name,age,email)
+            {
+                this.Name=name;
+                this.Age=age;
+                this.Email=email;
+            }
+            getname()
+            {
+                return this.Name;
+            }
+            getage()
+            {
+                return this.Age;
+            }
+            setemail(e)
+            {
+                if(/@/.test(e)==true)
+                    {
+                        this.Email=e;
+                    }
+            }
+        }
+        user1=new User("John","34","john@gmail.com");
+        user1.setemail("johnjohn@gmail.com");
+        user1.setemail("john123gmail.com");
+       document.write("Name: "+user1.getname()+" <br>Age: "+user1.getage()+"<br> Email:  "+user1.Email);
+        
+    </script>
+</body>
+</html>

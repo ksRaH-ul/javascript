@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Book{
+            constructor(title,author,price)
+            {
+                this.title=title;
+                this.author=author;
+                this.price=price;
+            }
+            gettitle()
+            {
+                return this.title;
+            }
+            getauthor()
+            {
+                return this.author;
+            }
+            setprice(p)
+            {
+                if((typeof p == "number")&& p>0)
+                    {
+                        this.price=p;
+                    }
+            }
+        }
+        book1=new Book("The Alchemist","Paulo Coelho",300);
+        book1.setprice(500);
+        book1.setprice("sdf");
+       document.write("title: "+book1.gettitle()+" <br>author: "+book1.getauthor()+"<br> price:  "+book1.price);
+        
+    </script>
+</body>
+</html>
