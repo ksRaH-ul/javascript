@@ -6,6 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form onsubmit="show(event)">
+        <input type="text" name="text" id="textbox">
+        <br><br>
+        <input type="submit" value="submit">
+    </form >
+    <p id="show" onmouseover="mouseover(this)" onmouseout="mouseout(this)"></p>
+    <script>
+        function show()
+        {
+            event.preventDefault();
+            var x = document.getElementById("textbox").value;
+            document.getElementById("show").innerHTML=x;
+            document.getElementById("show").style.color="blue";
+        }
+        function mouseover(obj){
+            obj.style.color="green";
+        }
+        function mouseout(obj)
+        {
+            obj.style.color="blue";
+        }
+    </script>
 </body>
 </html>
