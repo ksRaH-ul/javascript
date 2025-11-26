@@ -2,9 +2,19 @@
 <html>
 <body>
 
-<h2 onmousedown="document.write(this)">The JavaScript <i>this</i> Keyword</h2>
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
 
-<button onclick="document.write(this)">Click to Remove Me!</button>
+<script>
+function mOver(obj) {
+  obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "hello"
+}
+</script>
 
 </body>
-</html>
+</html> 
