@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var limit = parseInt(prompt("enter the number"));
+    
+        function check(limit)
+        {
+            if(limit <= 1)
+        {
+            return limit;
+        }
+            return check(limit-1) + check(limit-2);
+        
+        }
+        console.log(check(limit));
+
+    </script>
+</body>
+</html>

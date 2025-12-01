@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = parseFloat(prompt("Enter a"));
+        var b = parseFloat(prompt("Enter b"));
+        var c = parseFloat(prompt("Enter c"));
+
+        var discriminant = (b*b) - (4*a*c);
+        var denominator = 2 * a;
+
+        var realPart = (-b) / denominator;
+
+        if (discriminant > 0) {
+            var r1 = ( -b + Math.sqrt(discriminant) ) / denominator;
+            var r2 = ( -b - Math.sqrt(discriminant) ) / denominator;
+
+            alert("Real Roots:\nRoot 1 = " + r1 + "\nRoot 2 = " + r2);
+        }
+        else if (discriminant === 0) {
+            var r = -b / denominator;
+            alert("One Real Root (Repeated):\nRoot = " + r);
+        }
+        else {
+            var imaginaryPart = Math.sqrt(-discriminant) / denominator;
+
+            var r1 = realPart + " + " + imaginaryPart + "i";
+            var r2 = realPart + " - " + imaginaryPart + "i";
+
+            alert("Imaginary Roots:\nRoot 1 = " + r1 + "\nRoot 2 = " + r2);
+        }
+    </script>
+</body>
+</html>

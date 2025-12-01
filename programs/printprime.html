@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+</head>
+<body>
+    <script>
+        var t = " ";
+        var l = parseInt(prompt("Enter the start:"));
+        var h = parseInt(prompt("Enter the end:"));
+
+        for (var i = l; i <= h; i++) {
+
+            if (i < 2) continue;      
+
+            var flag = 0;            
+
+            for (var j = 2; j <= Math.sqrt(i); j++) {
+                if (i % j == 0) {
+                    flag = 1;
+                    break;
+                }
+            }
+
+            if (flag == 0) {         
+                t += i + " ";
+            }
+        }
+
+        alert("Prime numbers are: " + t);
+    </script>
+</body>
+</html>

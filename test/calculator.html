@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div>
+        <form onsubmit="Calculator(); return false;">
+            <input type="text" name="text1" id="text1" placeholder="enter number 1" required>
+            <br><br>
+            <input type="text" name="text2" id="text2" placeholder="enter number 2" required>
+            <br><br>
+            <select name="drop" id="drop">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <br><br>
+            <input type="submit" value="=">
+            <br><br>
+        </form>
+        <br>
+        <p id="result"></p>
+    </div>
+    <script>
+        function Calculator()
+        {
+            var a = Number(document.getElementById("text1").value);
+            var b = Number(document.getElementById("text2").value);
+            var c= document.getElementById("drop").value;
+            var result;
+            switch (c)
+            {
+                case '+': result=add(a,b);
+                break;
+                
+                case '-':result=subtract(a,b);
+                break;
+
+                case '*':result=multiply(a,b);
+                break;
+
+                case '/': result=divide(a,b);
+                break;
+            }
+            document.getElementById("result").innerHTML=result;
+        }
+         function add(a,b)
+         {
+            return (a+b);
+         }
+         function subtract(a,b)
+         {
+            return (a-b);
+         }
+         function multiply(a,b)
+         {
+            return (a*b);
+         }
+         function divide(a,b)
+         {
+            return (a/b);
+         }
+
+    </script>
+</body>
+</html>
