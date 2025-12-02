@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
 </head>
-<body>
+<body style="margin-left: 20px;">
     <div>
         <form onsubmit="Calculator(); return false;">
             <input type="text" name="text1" id="text1" placeholder="enter number 1" required>
@@ -62,7 +62,14 @@
          }
          function divide(a,b)
          {
-            return (a/b);
+            if(b==0)
+         {
+            return "not possible to divide by zero";
+         }
+         else
+         {
+            return(a/b);
+         }
          }
 
     </script>
